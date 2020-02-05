@@ -4,8 +4,8 @@
 unsigned char gmul(unsigned char a, unsigned char b) {
     unsigned char p = 0;
     unsigned char counter;
-    unsigned char hi_bit_set;
     for(counter = 0; counter < 8; counter++) {
+        unsigned char hi_bit_set;
         if((b & 1) == 1)
             p ^= a;
         hi_bit_set = (a & 0x80);
